@@ -1,0 +1,140 @@
+:root {
+  --red: #FF0000;
+  --black: #000000;
+  --panel: #0d0d0d;
+  --border: rgba(255,0,0,0.25);
+  --text: #e8e8e8;
+
+  --mono: 'Share Tech Mono', monospace;
+  --head: 'Orbitron', sans-serif;
+  --body: 'Rajdhani', sans-serif;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:black;
+  color:white;
+  font-family:var(--body);
+  min-height:100vh;
+  overflow-x:hidden;
+}
+
+.grid-bg{
+  position:fixed;
+  inset:0;
+  background-image:
+    linear-gradient(rgba(255,0,0,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,0,0,0.04) 1px, transparent 1px);
+  background-size:40px 40px;
+}
+
+.page{
+  display:none;
+  min-height:100vh;
+  position:relative;
+  z-index:1;
+}
+
+.page.active{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+}
+
+.logo-main{
+  font-family:var(--head);
+  font-size:5rem;
+  color:var(--red);
+  margin-bottom:2rem;
+  text-shadow:0 0 30px red;
+}
+
+.btn-enter{
+  background:red;
+  color:black;
+  border:none;
+  padding:1rem 2rem;
+  cursor:pointer;
+  font-family:var(--head);
+  font-weight:bold;
+}
+
+.btn-enter:hover{
+  background:black;
+  color:red;
+  border:1px solid red;
+}
+
+.signin-panel{
+  background:var(--panel);
+  border:1px solid var(--border);
+  padding:3rem;
+  width:400px;
+}
+
+.form-group{
+  margin-bottom:1rem;
+}
+
+.form-label{
+  display:block;
+  margin-bottom:.5rem;
+  color:red;
+  font-family:var(--mono);
+}
+
+.form-input{
+  width:100%;
+  padding:.8rem;
+  background:black;
+  border:1px solid var(--border);
+  color:white;
+}
+
+.btn-signin{
+  width:100%;
+  padding:1rem;
+  background:red;
+  color:black;
+  border:none;
+  cursor:pointer;
+  font-weight:bold;
+}
+
+.topbar{
+  background:black;
+  border-bottom:1px solid var(--border);
+  padding:1rem;
+}
+
+.topbar-logo{
+  color:red;
+  font-family:var(--head);
+  font-size:1.5rem;
+}
+
+.main-feed{
+  padding:2rem;
+}
+
+.post{
+  background:var(--panel);
+  border:1px solid var(--border);
+  padding:1.5rem;
+}
+
+.post-title{
+  font-size:1.5rem;
+  color:red;
+  margin-bottom:1rem;
+}
+
+.post-content{
+  color:#ccc;
+}
